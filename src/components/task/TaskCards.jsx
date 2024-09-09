@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TaskCard from "./TaskCard";
-import AddTaskCaradButton from "./button/AddTaskCardButton";
+import AddTaskCardButton from "./button/AddTaskCardButton";
 
 const TaskCards = () => {
   const [taskCardsList, setTaskCardsList] = useState([
@@ -12,7 +12,7 @@ const TaskCards = () => {
       {taskCardsList.map((taskCardList) => (
         <TaskCard key={taskCardList.id} />
       ))}
-      <AddTaskCaradButton
+      <AddTaskCardButton
         taskCardsList={taskCardsList}
         setTaskCardsList={setTaskCardsList}
       />
