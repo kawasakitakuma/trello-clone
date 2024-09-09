@@ -23,7 +23,6 @@ const TaskAddInput = ({ inputText, setInputText, taskList, setTaskList }) => {
 
   const handleChange = (e) => {
     setInputText(e.target.value);
-    console.log(inputText);
   };
 
   return (
