@@ -1,8 +1,9 @@
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="dragDropArea">
       <DragDropContext>
         <Droppable droppableId="droppable">
           {(provided) => (
@@ -10,6 +11,7 @@ function App() {
               <Draggable draggableId="item0" index={0}>
                 {(provided) => (
                   <div
+                    className="item"
                     ref={provided.innerRef}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
