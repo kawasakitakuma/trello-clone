@@ -1,7 +1,24 @@
 import React from "react";
 
-const TaskCardDeleteButton = () => {
-  return <div>TaskCardDeleteButton</div>;
+const TaskCardDeleteButton = ({
+  taskCardsList,
+  setTaskCardsList,
+  taskCard,
+}) => {
+  const taskCardDeleteButton = (id) => {
+    //タスクカードを削除する
+    setTaskCardsList(taskCardsList.filter((e) => e.id !== id));
+  };
+  return (
+    <div>
+      <button
+        className="taskCardDeleteButton"
+        onClick={() => taskCardDeleteButton(taskCard.id)}
+      >
+        ❌
+      </button>
+    </div>
+  );
 };
 
 export default TaskCardDeleteButton;
